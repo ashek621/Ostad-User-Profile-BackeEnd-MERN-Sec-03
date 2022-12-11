@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "3b70c15a-97fb-4524-ac4b-50369344336b",
+		"name": "userProfile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23290124"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"FirstName\":\"Kazi\",\r\n\"LastName\":\"Ashek\",\r\n\"UserName\":\"ashek03\",\r\n\"Email\":\"Kaziashek106@gmail.com\",\r\n\"Password\":\"@aSheK621\",\r\n\"ConfirmPassWord\":\"@aSheK621\",\r\n\"ContactNumber\":\"01864096304\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/SignUp",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"SignUp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LogIn",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"UserName\":\"ashek02\",\r\n\"Password\":\"@aSheK621\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/LogIn",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"LogIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangePassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "UserName",
+						"value": "ashek01",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\r\n\"Password\":\"@aSheK5400\"\r\n\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/ChangePassword",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"ChangePassword"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:8000/api/v1",
+			"type": "string"
+		}
+	]
+}
